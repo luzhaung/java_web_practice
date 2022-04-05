@@ -1,0 +1,78 @@
+package com.shiqidu.oa.web.action;
+
+import com.shiqidu.oa.utils.DBUtil;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserEditServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+        // 获取参数
+        String id = request.getParameter("id");
+        // 链接数据库
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        String contextPath = request.getContextPath();
+
+        writer.print("<!DOCTYPE html>");
+        writer.print("<html lang=\"en\">");
+        writer.print("<head>");
+        writer.print("    <meta charset=\"UTF-8\">");
+        writer.print("    <title>编辑用户</title>");
+        writer.print("</head>");
+        writer.print("<body>");
+        writer.print("<h1>编辑用户</h1>");
+        writer.print("<form action=\"" + contextPath + "/user/update\" method=\"post\">");
+
+        try {
+            conn = DBUtil.getConnection();
+            String sql = "select id,name,age,sex from learnjava.user where id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                String name = rs.getString("name");
+                String age = rs.getString("age");
+                String sex = rs.getString("sex");
+                writer.print("    <label>");
+                writer.print("                姓名");
+                writer.print("                <input type=\"text\" name=\"name\" value=\"" + name + "\" />");
+                writer.print("    </label><br>");
+                writer.print("    <label>");
+                writer.print("                年龄");
+                writer.print("                <input type=\"number\" name=\"age\" value=\"" + age + "\" />");
+                writer.print("    </label><br>");
+                writer.print("    <label>");
+                writer.print("                性别");
+                writer.print("        男: <input type=\"radio\" name=\"sex\" value=\"1\" " + (sex.equals("1") ? "checked" : "") + " />");
+                writer.print("                女: <input type=\"radio\" name=\"sex\" value=\"0\" " + (sex.equals("0") ? "checked" : "") + " />");
+                writer.print("    </label><br>");
+                writer.print("                <input type=\"hidden\" name=\"id\" value=\"" + id + "\" />");
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(conn, ps, rs);
+        }
+
+        writer.print("    <input type=\"submit\" value=\"编辑\">");
+        writer.print("</form>");
+        writer.print("</body>");
+        writer.print("</html>");
+    }
+}
