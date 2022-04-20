@@ -32,7 +32,7 @@ public class AppTest {
         SqlSession sqlSession = factory.openSession();
 
         // 查询单个student
-        Student stu = sqlSession.selectOne("com.shiqidu.dao.StudentDao.selectStudentById");
+        Student stu = sqlSession.selectOne("com.shiqidu.dao.StudentDao.selectStudentById", 2);
         System.out.println(stu);
 
         System.out.println("==============================================================");
