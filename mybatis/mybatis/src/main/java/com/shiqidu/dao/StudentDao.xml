@@ -9,4 +9,12 @@
     <select id="getAll" resultType="com.shiqidu.entity.Student">
         select * from learnjava.student
     </select>
+
+    <insert id="insertStudent">
+        insert into learnjava.student value (4, '赵六', 34, 'zhaoliu@qq.com')
+    </insert>
+
+    <insert id="insertStudentWithStudent">
+        insert into learnjava.student value (#{id}, #{name}, #{age}, #{email})
+    </insert>
 </mapper>

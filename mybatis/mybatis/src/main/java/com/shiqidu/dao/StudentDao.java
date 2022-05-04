@@ -4,4 +4,6 @@ import com.shiqidu.entity.Student;
 
 public interface StudentDao {
     Student selectStudentById(Integer id);
+
+    int insertStudent(Student student);
 }
