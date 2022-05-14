@@ -1,0 +1,50 @@
+package com.shiqidu.oa.web.action;
+
+import com.shiqidu.oa.utils.DBUtil;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class UserSaveServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        // 获取参数
+        String name = request.getParameter("name");
+        String age = request.getParameter("age");
+        String sex = request.getParameter("sex");
+
+        Connection connection = null;
+        PreparedStatement ps = null;
+        int saveCount = 0;
+        try {
+            connection = DBUtil.getConnection();
+            String sql = "insert into learnjava.user(name,age,sex) values(?,?,?)";
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, age);
+            ps.setString(3, sex);
+            // 保存成功数量
+            saveCount = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection, ps, null);
+        }
+
+        if (saveCount == 1) {
+            // request.getRequestDispatcher("/user/list").forward(request, response);
+            response.sendRedirect(request.getContextPath() + "/user/list");
+        } else {
+            // request.getRequestDispatcher("/error.html").forward(request, response);
+            response.sendRedirect(request.getContextPath() + "/user/list");
+        }
+    }
+}

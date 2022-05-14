@@ -1,0 +1,3 @@
+com\shiqidu\App.class
+com\shiqidu\entity\Student.class
+com\shiqidu\dao\StudentDao.class
