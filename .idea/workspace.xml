@@ -1,73 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="servlet01:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c7f0eeb-4d4c-49b1-9c02-00c53da2d4dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/javaweb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/java/com/shiqidu/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/java/com/shiqidu/dao/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/java/com/shiqidu/dao/StudentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/java/com/shiqidu/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/resources/mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/test/java/com/shiqidu/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/target/classes/com/shiqidu/dao/StudentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/target/classes/mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis1/target/classes/com/shiqidu/dao/Student.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis1/target/classes/mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserDeleteServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserDetailServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserEditServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserListServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserSaveServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/com/shiqidu/oa/web/action/UserUpdateServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/classes/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/oa_war_exploded/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/test05.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserDeleteServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserDetailServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserEditServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserListServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserSaveServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/com/shiqidu/oa/web/action/UserUpdateServlet.java.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/oa/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/oa_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/servlet01_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_api_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/main/java/com/shiqidu/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/main/java/com/shiqidu/dao/StudentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/main/java/com/shiqidu/dao/StudentDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/main/java/com/shiqidu/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/main/resources/mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis/src/test/java/com/shiqidu/AppTest.java" beforeDir="false" />
+    <list default="true" id="6df5df2e-8c36-4880-a001-fe716b3666c0" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/oa_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/servlet01_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_api_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsp_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis/src/main/mybatis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis1/src/test/mybatis1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/javaweb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oa/oa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/oa/oa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/test05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet01/servlet01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/servlet01/servlet01.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,97 +50,211 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="29A5Xp0Bi9hP7azya8SbhHDu6rG" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\JavaProjects\maven-open-repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.8.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="F:\JavaProjects\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29ADYZ97C0UIxPAMyuyBEOEucho" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/JavaProjects/practice/javaweb&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/JavaProjects/practice/javaweb/mybatis1",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2689655",
+    "settings.editor.selected.configurable": "MavenSettings"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Tomcat 10.0.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 10.0.14" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="targets">
-            <list>
-              <WatchedTargetModelImpl>
-                <option name="name" value="CONTEXT_XML" />
-                <option name="transportStagingTarget">
-                  <TransportTarget>
-                    <option name="id" value="b0c9e8e0-ac6c-4c0f-9a9b-88ee9b47cbc6" />
-                    <id>b0c9e8e0-ac6c-4c0f-9a9b-88ee9b47cbc6</id>
-                  </TransportTarget>
-                </option>
-                <option name="watchedLocalPath" value="" />
-                <watched-path />
-                <name>CONTEXT_XML</name>
-                <transport-target>
-                  <TransportTarget>
-                    <option name="id" value="b0c9e8e0-ac6c-4c0f-9a9b-88ee9b47cbc6" />
-                    <id>b0c9e8e0-ac6c-4c0f-9a9b-88ee9b47cbc6</id>
-                  </TransportTarget>
-                </transport-target>
-              </WatchedTargetModelImpl>
-              <StagingTargetModelImpl>
-                <option name="name" value="STAGING" />
-                <option name="stagingRemotePath" value="" />
-                <option name="transportStagingTarget">
-                  <TransportTarget>
-                    <option name="id" value="16fbdfd3-f2f2-42ee-9fb7-bcfbb4368289" />
-                    <id>16fbdfd3-f2f2-42ee-9fb7-bcfbb4368289</id>
-                  </TransportTarget>
-                </option>
-                <staging-path />
-                <name>STAGING</name>
-                <transport-target>
-                  <TransportTarget>
-                    <option name="id" value="16fbdfd3-f2f2-42ee-9fb7-bcfbb4368289" />
-                    <id>16fbdfd3-f2f2-42ee-9fb7-bcfbb4368289</id>
-                  </TransportTarget>
-                </transport-target>
-              </StagingTargetModelImpl>
-            </list>
-          </option>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="4076" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
+}]]></component>
+  <component name="RunManager" selected="JUnit.AppTest.testSelectAll">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shiqidu.App" />
+      <module name="mybatis1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shiqidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shiqidu.MainApp" />
+      <module name="dynamic_proxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shiqidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shiqidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shiqidu" />
+      <option name="MAIN_CLASS_NAME" value="com.shiqidu.AppTest" />
+      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 10.0.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.14" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/oa" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="oa:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/oa" />
+          </settings>
+        </artifact>
+        <artifact name="servlet01:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/servlet01" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="7a6c2632-33b7-45ef-8dfd-9472a02a5e0c" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="6516" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="oa:war exploded" />
+        </option>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="servlet01:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AppTest.testSelectAll" />
+      <item itemvalue="Tomcat 服务器.Tomcat 10.0.14" />
+      <item itemvalue="应用程序.App" />
+      <item itemvalue="应用程序.MainApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest.testSelectAll" />
+        <item itemvalue="应用程序.App" />
+        <item itemvalue="应用程序.MainApp" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1c7f0eeb-4d4c-49b1-9c02-00c53da2d4dd" name="Changes" comment="" />
-      <created>1652543091141</created>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6df5df2e-8c36-4880-a001-fe716b3666c0" name="变更" comment="" />
+      <created>1652547044817</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652543091141</updated>
-      <workItem from="1652543093737" duration="368000" />
-      <workItem from="1652543551463" duration="64000" />
-      <workItem from="1652543623872" duration="57000" />
+      <updated>1652547044817</updated>
+      <workItem from="1652547046283" duration="2264000" />
     </task>
     <servers />
   </component>

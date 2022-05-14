@@ -1,0 +1,154 @@
+package com.shiqidu.oa.web.action;
+
+import com.shiqidu.oa.utils.DBUtil;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class UserListServlet extends HttpServlet {
+
+    /*@Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }*/
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+
+        // 获取cookie
+        Cookie[] cookies = request.getCookies();
+        Cookie myCookie = getCookieByName(cookies, "lastVisitTime");
+        if (myCookie == null) {
+            writer.write("<h1 align='center'>欢迎访问OA系统</h1>");
+        } else {
+            String value = myCookie.getValue();
+            writer.write("<h1 align='center'>欢迎回来，上次访问时间是" + URLDecoder.decode(value, StandardCharsets.UTF_8) + "</h1>");
+        }
+
+        // 记录cookie
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateTime = simpleDateFormat.format(date);
+        Cookie cookie = new Cookie("lastVisitTime", URLEncoder.encode(dateTime, StandardCharsets.UTF_8));
+        cookie.setMaxAge(86400);
+        cookie.setPath("/");
+        response.addCookie(cookie);
+
+
+        // 查询数据库
+        Connection connection = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        // 应用根路径
+        String contextPath = request.getContextPath();
+
+        writer.print("   <!DOCTYPE html>");
+        writer.print("   <html lang=\"en\">");
+        writer.print("   <head>");
+        writer.print("       <meta charset=\"UTF-8\">");
+        writer.print("       <title>用户列表页</title>");
+        writer.print(" <script>");
+        writer.print("function del(id) {if (window.confirm('确定删除吗？')){document.location.href='" + contextPath + "/user/delete?id='+id}}");
+        writer.print(" </script>");
+        writer.print("   </head>");
+        writer.print("   ");
+        writer.print("   <style>");
+        writer.print("                   table {");
+        writer.print("               border-collapse: collapse;");
+        writer.print("               width: 50%;");
+        writer.print("           }");
+        writer.print("           th {");
+        writer.print("               font-weight: bold;");
+        writer.print("           }");
+        writer.print("           th,td {");
+        writer.print("               padding: 10px 20px;");
+        writer.print("               text-align: center;");
+        writer.print("               border: 1px solid grey;");
+        writer.print("           }");
+        writer.print("    .addUser {");
+        writer.print("               margin-bottom: 20px;");
+        writer.print("           }");
+        writer.print("   </style>");
+        writer.print("   ");
+        writer.print("   <body>");
+        writer.print("     <h1>用户列表</h1>");
+        writer.print("     <div class=\"addUser\"><a href=\"" + contextPath + "/add.html\">新增用户</a></div>");
+        writer.print("   ");
+        writer.print("     <table>");
+        writer.print("       <tr>");
+        writer.print("         <th>编号</th>");
+        writer.print("         <th>姓名</th>");
+        writer.print("         <th>年龄</th>");
+        writer.print("         <th>性别</th>");
+        writer.print("         <th>操作</th>");
+        writer.print("       </tr>");
+        writer.print("   ");
+        writer.print("   ");
+
+        try {
+            connection = DBUtil.getConnection();
+            String sql = "select id,name,age,sex from learnjava.user";
+            ps = connection.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                String age = rs.getString("age");
+                String sex = rs.getString("sex");
+
+                writer.print("       <tr>");
+                writer.print("         <td>" + id + "</td>");
+                writer.print("         <td>" + name + "</td>");
+                writer.print("         <td>" + age + "</td>");
+                writer.print("         <td>" + (sex.equals("0") ? "女" : "男") + "</td>");
+                writer.print("         <td>");
+                writer.print("           <a href=\"javascript:void(0);\" onclick=\"del(" + id + ")\">删除</a>");
+                writer.print("           <a href=\"" + contextPath + "/user/detail?id=" + id + "\">查看</a>");
+                writer.print("           <a href=\"" + contextPath + "/user/edit?id=" + id + "\">编辑</a>");
+                writer.print("         </td>");
+                writer.print("       </tr>");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection, ps, rs);
+        }
+
+        writer.print("     </table>");
+        writer.print("   </body>");
+        writer.print("   </html>");
+    }
+
+    /**
+     * 根据名称获取cookie
+     *
+     * @param cookies cookies
+     * @param name    名称
+     * @return cookie
+     */
+    private static Cookie getCookieByName(Cookie[] cookies, String name) {
+        if (cookies == null) {
+            return null;
+        }
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals(name)) {
+                return cookie;
+            }
+        }
+
+        return null;
+    }
+}
