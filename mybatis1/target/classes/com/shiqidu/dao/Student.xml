@@ -3,11 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shiqidu.dao.StudentDao">
-    <select id="selectById" resultType="com.shiqidu.domain.Student">
+    <select id="selectById" parameterType="int" resultType="com.shiqidu.domain.Student">
         select id,name,age,email from learnjava.student where id=#{studentId}
     </select>
 
     <select id="selectAll" resultType="com.shiqidu.domain.Student">
         select id,name,age,email from learnjava.student
+    </select>
+
+    <select id="selectByNameOrAge" resultType="com.shiqidu.domain.Student">
+        select id,name,age,email from learnjava.student where name = #{myname} or age = #{myage}
+    </select>
+
+    <select id="selectByStudent" resultType="com.shiqidu.domain.Student">
+        select id,name,age,email from learnjava.student where name = #{name} or age = #{age}
+    </select>
+
+    <select id="selectByPosition" resultType="com.shiqidu.domain.Student">
+        select id,name,age,email from learnjava.student where name = #{arg0} or age = #{arg1}
+    </select>
+
+    <select id="selectByMap" resultType="com.shiqidu.domain.Student">
+        select id,name,age,email from learnjava.student where name = #{name} or age = #{age}
     </select>
 </mapper>

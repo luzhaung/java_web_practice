@@ -9,39 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df5df2e-8c36-4880-a001-fe716b3666c0" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/oa_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/servlet01_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_api_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsp_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis/src/main/mybatis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis1/src/test/mybatis1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/javaweb.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa/oa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/oa/oa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/servlet01_war_exploded/test05.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet01/servlet01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/servlet01/servlet01.iml" afterDir="false" />
-    </list>
+    <list default="true" id="6df5df2e-8c36-4880-a001-fe716b3666c0" name="变更" comment="目录结构重构" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +37,9 @@
         <option name="userSettingsFile" value="F:\JavaProjects\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="29ADYZ97C0UIxPAMyuyBEOEucho" />
   <component name="ProjectViewState">
@@ -254,8 +225,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652547044817</updated>
-      <workItem from="1652547046283" duration="2264000" />
+      <workItem from="1652547046283" duration="2524000" />
     </task>
+    <task id="LOCAL-00001" summary="目录结构重构">
+      <created>1652549577838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652549577838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,5 +250,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="目录结构重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="目录结构重构" />
   </component>
 </project>
