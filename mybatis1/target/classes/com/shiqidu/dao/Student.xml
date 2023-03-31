@@ -7,8 +7,8 @@
         select id,name,age,email from learnjava.student where id=#{studentId}
     </select>
 
-    <select id="selectAll" resultType="com.shiqidu.domain.Student">
-        select id,name,age,email from learnjava.student
+    <select id="selectAll" resultType="stu">
+        select id,name,age,email,fee from learnjava.student
     </select>
 
     <select id="selectByNameOrAge" resultType="com.shiqidu.domain.Student">

@@ -5,6 +5,7 @@ public class Student {
     private String name;
     private Integer age;
     private String email;
+    private String fee;
 
     public Integer getId() {
         return id;
@@ -38,6 +39,14 @@ public class Student {
         this.email = email;
     }
 
+    public String getFee() {
+        return fee;
+    }
+
+    public void setFee(String fee) {
+        this.fee = fee;
+    }
+
     @Override
     public String toString() {
         return "Student实体{" +
@@ -45,6 +54,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
+                ", fee='" + fee + '\'' +
                 '}';
     }
 }
