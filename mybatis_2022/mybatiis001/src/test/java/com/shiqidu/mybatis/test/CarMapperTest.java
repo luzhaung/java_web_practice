@@ -1,5 +1,6 @@
 package com.shiqidu.mybatis.test;
 
+import com.shiqidu.mybatis.util.SqlSessionUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,6 +11,15 @@ import java.io.InputStream;
 
 public class CarMapperTest {
 
+    @Test
+    public void testInsertCarByUtil()
+    {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        int count = sqlSession.insert("insertCar");
+        System.out.println("插入了 " + count + " 条数据");
+        sqlSession.commit();
+        sqlSession.close();
+    }
     @Test
     public void testInsertCar() {
         SqlSession sqlSession = null;
