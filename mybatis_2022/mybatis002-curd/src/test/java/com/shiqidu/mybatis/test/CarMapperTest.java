@@ -1,14 +1,49 @@
 package com.shiqidu.mybatis.test;
 
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import com.shiqidu.mybatis.pojo.Car;
 import org.apache.ibatis.session.SqlSession;
 import com.shiqidu.mybatis.util.SqlSessionUtil;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
 public class CarMapperTest {
+
+    @Test
+    public void testEnvironment() throws IOException {
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis-config.xml"));
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        Car car = new Car(null, "33333", "比亚迪F9", 12.0, "2022-11-11", "插混");
+        sqlSession.insert("car.insertCar", car);
+
+        sqlSession.commit();
+        sqlSession.close();
+
+
+        SqlSessionFactory sqlSessionFactory1 = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis-config.xml"), "test");
+        SqlSession sqlSession1 = sqlSessionFactory1.openSession();
+
+        Car car1 = new Car(null, "55555", "比亚迪F10", 15.0, "2023-06-11", "插混");
+        sqlSession1.insert("car.insertCar", car1);
+
+        sqlSession1.commit();
+        sqlSession1.close();
+    }
+
+    @Test
+    public void testNamespace() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        List<Object> cars = sqlSession.selectList("userMapper.selectAll");
+        cars.forEach(System.out::println);
+        sqlSession.close();
+    }
 
     @Test
     public void selectCarByCarNo() {
@@ -32,6 +67,7 @@ public class CarMapperTest {
         System.out.println(car);
         sqlSession.close();
     }
+
     @Test
     public void updateCarById() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
@@ -50,6 +86,7 @@ public class CarMapperTest {
         sqlSession.commit();
         sqlSession.close();
     }
+
     @Test
     public void insertCarByPojo() {
         SqlSession sqlSession = SqlSessionUtil.openSession();

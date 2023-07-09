@@ -13,9 +13,21 @@
                 <property name="password" value=""/>
             </dataSource>
         </environment>
+
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/learnjava1"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+
     </environments>
     <mappers>
         <!--resource从类的根目录下开始查找-->
         <mapper resource="CarMapper.xml"/>
+        <mapper resource="UserMapper.xml"/>
     </mappers>
 </configuration>
