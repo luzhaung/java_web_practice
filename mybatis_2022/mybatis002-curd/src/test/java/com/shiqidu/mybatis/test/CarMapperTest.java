@@ -15,6 +15,20 @@ import java.util.List;
 public class CarMapperTest {
 
     @Test
+    public void testDataSource() throws IOException {
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis-config.xml"));
+
+        for (int i = 0; i < 11; i++) {
+            SqlSession sqlSession = sqlSessionFactory.openSession();
+            Car car = new Car(null, "33333", "比亚迪F9", 12.0, "2022-11-11", "插混");
+            sqlSession.insert("car.insertCar", car);
+            /*sqlSession.commit();
+            sqlSession.close();*/
+        }
+    }
+
+    @Test
     public void testEnvironment() throws IOException {
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis-config.xml"));
@@ -48,7 +62,7 @@ public class CarMapperTest {
     @Test
     public void selectCarByCarNo() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
-        List<Car> cars = sqlSession.selectList("org.mybatis.example.BlogMapper.selectCarByCarNo", "1003");
+        List<Car> cars = sqlSession.selectList("car.selectCarByCarNo", "1003");
         if (cars != null) {
             cars.forEach(System.out::println);
         }
