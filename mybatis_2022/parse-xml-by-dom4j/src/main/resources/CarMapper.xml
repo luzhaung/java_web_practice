@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="car">
+    <!--<select id="selectBlogById" resultType="Blog">
+        select * from Blog where id = #{id}
+    </select>-->
+    <select id="selectAll" resultType="com.shiqidu.mybatis.pojo.Car">
+        select * from t_car
+    </select>
+
+    <insert id="insertCar">
+        insert into t_car(id,car_no,brand,guide_price,produce_time,car_type) values (null, #{car_no}, #{brand}, #{guide_price}, #{produce_time}, #{car_type})
+    </insert>
+
+    <insert id="insertCarByPojo">
+        insert into t_car(id,car_no,brand,guide_price,produce_time,car_type) values (null, #{car_no}, #{brand}, #{guide_price}, #{produce_time}, #{car_type})
+    </insert>
+
+    <delete id="deleteCarById">
+        delete from t_car where id = #{id}
+    </delete>
+
+    <update id="updateCarById">
+        update t_car set car_no = #{car_no}, brand = #{brand}, guide_price = #{guide_price}, produce_time = #{produce_time}, car_type = #{car_type} where id = #{id}
+    </update>
+
+    <select id="selectCarById" resultType="com.shiqidu.mybatis.pojo.Car">
+        select * from t_car where id = #{id}
+    </select>
+
+    <select id="selectCarByCarNo" resultType="com.shiqidu.mybatis.pojo.Car">
+        select * from t_car where car_no = #{car_no}
+    </select>
+</mapper>
