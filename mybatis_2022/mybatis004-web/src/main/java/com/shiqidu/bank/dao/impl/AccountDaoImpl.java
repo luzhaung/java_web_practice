@@ -15,7 +15,7 @@ public class AccountDaoImpl implements AccountDao {
 
     public int updateByActNo(Account act) {
         SqlSession sqlSession = SqlSessionUtil.openSession();
-        int count = sqlSession.selectOne("account.updateByActNo", act);
+        int count = sqlSession.update("account.updateByActNo", act);
         sqlSession.commit();
         sqlSession.close();
         return count;

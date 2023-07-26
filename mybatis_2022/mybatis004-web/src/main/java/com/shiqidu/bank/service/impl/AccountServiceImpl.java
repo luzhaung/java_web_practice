@@ -27,7 +27,5 @@ public class AccountServiceImpl implements AccountService {
         if (affectCount < 2) {
             throw new TransferException("转账失败");
         }
-
-
     }
 }
