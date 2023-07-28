@@ -27,8 +27,10 @@ public class AccountServlet extends HttpServlet {
             accountService.transfer(fromActNo, toActNo, money);
             response.sendRedirect(request.getContextPath() + "/success.html");
         } catch (AccountNotEnoughException e) {
+            System.out.println(e.getMessage());
             response.sendRedirect(request.getContextPath() + "/error1.html");
         } catch (TransferException e) {
+            System.out.println(e.getMessage());
             response.sendRedirect(request.getContextPath() + "/error2.html");
         }
 
