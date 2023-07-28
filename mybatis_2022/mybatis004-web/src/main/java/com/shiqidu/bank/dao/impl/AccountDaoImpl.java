@@ -8,16 +8,11 @@ import org.apache.ibatis.session.SqlSession;
 public class AccountDaoImpl implements AccountDao {
     public Account selectByActNo(String actNo) {
         SqlSession sqlSession = SqlSessionUtil.openSession();
-        Account account = (Account) sqlSession.selectOne("account.selectByActNo", actNo);
-        sqlSession.close();
-        return account;
+        return (Account) sqlSession.selectOne("account.selectByActNo", actNo);
     }
 
     public int updateByActNo(Account act) {
         SqlSession sqlSession = SqlSessionUtil.openSession();
-        int count = sqlSession.update("account.updateByActNo", act);
-        sqlSession.commit();
-        sqlSession.close();
-        return count;
+        return sqlSession.update("account.updateByActNo", act);
     }
 }

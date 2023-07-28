@@ -22,11 +22,32 @@ public class SqlSessionUtil {
         }
     }
 
+    // 全局的，服务器级别的，一个服务器定义一个
+    private static ThreadLocal<SqlSession> local = new ThreadLocal<>();
+
     /**
      * 获取会话对象
+     *
      * @return 会话对象
      */
     public static SqlSession openSession() {
-        return sessionFactory.openSession();
+        SqlSession sqlSession = local.get();
+        if (sqlSession == null) {
+            sqlSession = sessionFactory.openSession();
+            local.set(sqlSession);
+        }
+        return sqlSession;
+    }
+
+    /**
+     * 关闭sqlSession
+     * @param sqlSession 会话对象
+     */
+    public static void close(SqlSession sqlSession)
+    {
+        if (sqlSession != null) {
+            sqlSession.close();
+            local.remove();
+        }
     }
 }

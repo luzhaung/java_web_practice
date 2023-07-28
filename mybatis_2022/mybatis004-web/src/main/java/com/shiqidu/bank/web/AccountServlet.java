@@ -5,6 +5,7 @@ import com.shiqidu.bank.exception.TransferException;
 import com.shiqidu.bank.service.AccountService;
 import com.shiqidu.bank.service.impl.AccountServiceImpl;
 
+import com.shiqidu.bank.util.SqlSessionUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ public class AccountServlet extends HttpServlet {
     private final AccountService accountService = new AccountServiceImpl();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String fromActNo = request.getParameter("fromActNo");
         String toActNo = request.getParameter("toActNo");
         Double money = Double.parseDouble(request.getParameter("money"));
@@ -29,7 +30,7 @@ public class AccountServlet extends HttpServlet {
         } catch (AccountNotEnoughException e) {
             System.out.println(e.getMessage());
             response.sendRedirect(request.getContextPath() + "/error1.html");
-        } catch (TransferException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             response.sendRedirect(request.getContextPath() + "/error2.html");
         }
