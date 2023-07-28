@@ -15,7 +15,7 @@ import java.io.IOException;
 @WebServlet("/transfer")
 public class AccountServlet extends HttpServlet {
 
-    private AccountService accountService = new AccountServiceImpl();
+    private final AccountService accountService = new AccountServiceImpl();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

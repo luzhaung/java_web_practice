@@ -8,16 +8,21 @@ import com.shiqidu.bank.pojo.Account;
 import com.shiqidu.bank.service.AccountService;
 
 public class AccountServiceImpl implements AccountService {
-    private AccountDao accountDao = new AccountDaoImpl();
+    private final AccountDao accountDao = new AccountDaoImpl();
 
     public void transfer(String fromActNo, String toActNo, Double money) throws AccountNotEnoughException, TransferException {
         Account fromAccount = accountDao.selectByActNo(fromActNo);
+        if (fromAccount == null) {
+            throw new TransferException("转出账户不存在");
+        }
         if (fromAccount.getBalance() < money) {
             throw new AccountNotEnoughException("对不起，余额不足");
         }
 
         Account toAccount = accountDao.selectByActNo(toActNo);
-
+        if (toAccount == null) {
+            throw new TransferException("转入账户不存在");
+        }
         fromAccount.setBalance(fromAccount.getBalance() - money);
         toAccount.setBalance(toAccount.getBalance() + money);
 
