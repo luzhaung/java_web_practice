@@ -11,8 +11,13 @@ import com.shiqidu.bank.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
 public class AccountServiceImpl implements AccountService {
+
+    // 自己写的dao实现类
     // private final AccountDao accountDao = new AccountDaoImpl();
-    private final AccountDao accountDao = (AccountDao) GenerateDaoProxy.generate(SqlSessionUtil.openSession(), AccountDao.class);
+    // 自己封装的动态代理
+    // private final AccountDao accountDao = (AccountDao) GenerateDaoProxy.generate(SqlSessionUtil.openSession(), AccountDao.class);
+    // mybatis的动态代理
+    private final AccountDao accountDao = SqlSessionUtil.openSession().getMapper(AccountDao.class);
 
     /**
      * 转账方法
