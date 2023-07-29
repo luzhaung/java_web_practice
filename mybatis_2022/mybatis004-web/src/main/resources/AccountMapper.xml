@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="account">
+<mapper namespace="com.shiqidu.bank.dao.AccountDao">
     <select id="selectByActNo" resultType="com.shiqidu.bank.pojo.Account">
         select * from t_act where actno = #{actno}
     </select>
