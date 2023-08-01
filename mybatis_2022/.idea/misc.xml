@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -8,6 +9,7 @@
         <option value="$PROJECT_DIR$/mybatis002-curd/pom.xml" />
         <option value="$PROJECT_DIR$/parse-xml-by-dom4j/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis004-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-009-advanced-mapping/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,6 +9,7 @@
         <module name="junt-test" />
         <module name="parse-xml-by-dom4j" />
         <module name="mybatis001" />
+        <module name="mybatis-009-advanced-mapping" />
         <module name="mybatis004-web" />
         <module name="mybatis002-curd" />
       </profile>
