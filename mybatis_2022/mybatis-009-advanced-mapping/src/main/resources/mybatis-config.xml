@@ -5,6 +5,9 @@
 <configuration>
 
     <properties resource="jdbc.properties" />
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
     <!--需要引入每一个实体类，名字（alias）可以任意起名-->
     <!--<typeAlias type="com.shiqidu.mybatis.pojo.User" alias="user"/>-->
     <typeAliases>

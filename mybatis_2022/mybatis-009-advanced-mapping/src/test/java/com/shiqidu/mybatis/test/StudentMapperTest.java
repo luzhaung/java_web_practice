@@ -31,7 +31,8 @@ public class StudentMapperTest {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
         Student student = mapper.selectByIdStep1(3);
-        System.out.println(student);
+        // System.out.println(student);
+        System.out.println(student.getSname());
         sqlSession.close();
     }
 }

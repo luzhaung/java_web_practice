@@ -32,7 +32,11 @@
     <resultMap id="studentResultMapByStep" type="student">
         <id column="sid" property="sid"/>
         <result column="sname" property="sname"/>
-        <association property="clazz" select="com.shiqidu.mybatis.mapper.ClazzMapper.selectByIdStep2" column="cid" />
+        <association
+            property="clazz"
+            select="com.shiqidu.mybatis.mapper.ClazzMapper.selectByIdStep2"
+            column="cid"
+        />
     </resultMap>
     <select id="selectByIdStep1" resultMap="studentResultMapByStep">
         select sid,sname,cid from t_student where sid = #{sid}
