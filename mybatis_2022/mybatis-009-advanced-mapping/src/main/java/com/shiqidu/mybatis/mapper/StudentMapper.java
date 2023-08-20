@@ -2,6 +2,8 @@ package com.shiqidu.mybatis.mapper;
 
 import com.shiqidu.mybatis.pojo.Student;
 
+import java.util.List;
+
 public interface StudentMapper {
     Student selectById(Integer id);
 
@@ -9,4 +11,5 @@ public interface StudentMapper {
 
     Student selectByIdStep1(Integer id);
 
+    List<Student> selectByCidStep2(Integer cid);
 }

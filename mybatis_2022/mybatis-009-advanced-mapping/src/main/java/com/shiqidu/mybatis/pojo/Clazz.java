@@ -1,8 +1,28 @@
 package com.shiqidu.mybatis.pojo;
 
+import java.util.List;
+
 public class Clazz {
     private Integer cid;
     private String cname;
+    private List<Student> stus;
+
+    @Override
+    public String toString() {
+        return "Clazz{" +
+                "cid=" + cid +
+                ", cname='" + cname + '\'' +
+                ", stus=" + stus +
+                '}';
+    }
+
+    public List<Student> getStus() {
+        return stus;
+    }
+
+    public void setStus(List<Student> stus) {
+        this.stus = stus;
+    }
 
     public Clazz(Integer cid, String cname) {
         this.cid = cid;
@@ -28,11 +48,4 @@ public class Clazz {
         this.cname = cname;
     }
 
-    @Override
-    public String toString() {
-        return "Clazz{" +
-                "cid=" + cid +
-                ", cname='" + cname + '\'' +
-                '}';
-    }
 }

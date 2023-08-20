@@ -6,6 +6,7 @@
 
     <properties resource="jdbc.properties" />
     <settings>
+        <!--分步查询，延迟加载总开关-->
         <setting name="lazyLoadingEnabled" value="true"/>
     </settings>
     <!--需要引入每一个实体类，名字（alias）可以任意起名-->
