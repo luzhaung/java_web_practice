@@ -9,10 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 
 public class FirstSpringTest {
 
@@ -36,9 +33,10 @@ public class FirstSpringTest {
     }
 
     @Test
-    public void testHttpRequest() throws IOException {
-        String url = "https://clearplate-server-buff.oss-cn-beijing.aliyuncs.com/api/systemConf.json";
-        URL urlObj = new URL(url);
+    public void testHttpRequest() throws IOException, URISyntaxException {
+        String urlString = "https://clearplate-server-buff.oss-cn-beijing.aliyuncs.com/api/systemConf.json";
+        URI uri = new URI(urlString);
+        URL urlObj = uri.toURL();
         HttpURLConnection urlConnection = (HttpURLConnection) urlObj.openConnection();
         urlConnection.setRequestMethod("GET");
         BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -48,6 +46,7 @@ public class FirstSpringTest {
             response.append(inputLine);
         }
         in.close();
+        urlConnection.disconnect();
         System.out.println(response);
     }
 }
