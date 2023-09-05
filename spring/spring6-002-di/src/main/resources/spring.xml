@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDaoBean" class="com.shiqidu.spring6.dao.UserDao"/>
+    <bean id="userServiceBean" class="com.shiqidu.spring6.service.UserService">
+        <!--<property name="mySQLUserDao" ref="userDao"/>-->
+        <property name="userDao" ref="userDaoBean"/>
+        <property name="vipDao" ref="vipDaoBean"/>
+    </bean>
+
+    <bean id="vipDaoBean" class="com.shiqidu.spring6.dao.VipDao"/>
+</beans>
