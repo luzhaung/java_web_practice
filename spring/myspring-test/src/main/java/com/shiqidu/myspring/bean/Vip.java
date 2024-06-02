@@ -1,11 +1,15 @@
 package com.shiqidu.myspring.bean;
 
+import com.shiqidu.myspring.annotation.Component;
+
 /**
  * @author luzhuang
  * @version 1.0
  * @className null.java
  * @since 1.0
  */
+
+@Component("vipBean")
 public class Vip {
     private String name;
     private int age;
