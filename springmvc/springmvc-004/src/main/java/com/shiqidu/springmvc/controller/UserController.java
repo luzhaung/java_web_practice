@@ -5,9 +5,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.Map;
 
 /**
  * @author luzhuang
@@ -18,6 +21,30 @@ import java.util.Arrays;
 
 @Controller
 public class UserController {
+
+    @RequestMapping("/testServletApi")
+    public String testServletApi(HttpServletRequest request) {
+        request.setAttribute("type", "ServletApi");
+        return "scope";
+    }
+
+    @RequestMapping("/testModel")
+    public String testModel(Model model) {
+        model.addAttribute("type", "Model");
+        return "scope";
+    }
+
+    @RequestMapping("/testMap")
+    public String testMap(Map<String, Object> map) {
+        map.put("type", "Map");
+        return "scope";
+    }
+
+    @RequestMapping("/testModelMap")
+    public String testModelMap(ModelMap modelMap) {
+        modelMap.addAttribute("type", "ModelMap");
+        return "scope";
+    }
 
     @RequestMapping("/")
     public String register() {
