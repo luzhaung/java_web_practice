@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -44,6 +45,14 @@ public class UserController {
     public String testModelMap(ModelMap modelMap) {
         modelMap.addAttribute("type", "ModelMap");
         return "scope";
+    }
+
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView(ModelAndView modelAndView) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("type", "ModelAndView");
+        mav.setViewName("scope");
+        return mav;
     }
 
     @RequestMapping("/")
