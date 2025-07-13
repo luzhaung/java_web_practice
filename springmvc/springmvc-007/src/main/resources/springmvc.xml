@@ -33,15 +33,9 @@
         </property>
     </bean>
 
-    <!--配置试图控制器-->
-    <mvc:view-controller path="test" view-name="test" />
-
     <!--开启注解驱动-->
     <mvc:annotation-driven />
 
-    <!--开启默认的servlet处理-->
-    <mvc:default-servlet-handler />
-
-    <!--配置静态资源处理-->
-    <mvc:resources mapping="/static/**" location="/static/" />
+    <!--配置试图控制器-->
+    <mvc:view-controller path="/" view-name="index" />
 </beans>
