@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>保存用户</title>
+</head>
+<body>
+
+<form th:action="@{user}" method="post">
+    <label for="userName">用户名</label><input type="text" id="userName" name="userName" /> <br>
+    <label for="age">年龄</label><input type="text" id="age" name="age" /> <br>
+    <!-- 隐藏域的方式提交 _method=put -->
+    <input type="hidden" name="_method" value="put" />
+    <input type="submit" th:value="提交" />
+</form>
+</body>
+</html>

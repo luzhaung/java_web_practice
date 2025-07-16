@@ -38,4 +38,5 @@
 
     <!--配置试图控制器-->
     <mvc:view-controller path="/" view-name="index" />
+    <mvc:view-controller path="/toSave" view-name="save"/>
 </beans>

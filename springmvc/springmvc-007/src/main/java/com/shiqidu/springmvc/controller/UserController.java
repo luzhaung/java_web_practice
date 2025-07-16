@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * @author luzhuang
@@ -24,6 +27,12 @@ public class UserController {
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     public String getUserById(@PathVariable("id") String id) {
         System.out.println("正在根据用户地查询用户信息，用户Id是：" + id);
+        return "ok";
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.PUT)
+    public String saveUser(@RequestParam Map<String, String> params) {
+        System.out.println("params:" + params);
         return "ok";
     }
 }
