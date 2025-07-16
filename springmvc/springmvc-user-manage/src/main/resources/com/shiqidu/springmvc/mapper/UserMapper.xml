@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shiqidu.springmvc.mapper.UserMapper">
+    <select id="selectAll" resultType="com.shiqidu.springmvc.bean.User">
+        SELECT * FROM um_user
+    </select>
+</mapper>
+
+
+<!--
+
+CREATE TABLE `um_user` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gender` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-->

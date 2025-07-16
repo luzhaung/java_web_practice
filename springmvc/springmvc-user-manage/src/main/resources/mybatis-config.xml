@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="jdbc.properties" />
+    <settings>
+        <!--分步查询，延迟加载总开关-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+    <!--需要引入每一个实体类，名字（alias）可以任意起名-->
+    <!--<typeAlias type="com.shiqidu.mybatis.pojo.User" alias="user"/>-->
+    <typeAliases>
+        <package name="com.shiqidu.mybatis.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+
+                <!--最多连接数-->
+                <property name="poolMaximumActiveConnections" value="10" />
+                <!--最多空闲连接数-->
+                <property name="poolMaximumIdleConnections" value="5" />
+                <!--强行减出时间，超时时间-->
+                <property name="poolMaximumCheckoutTime" value="5000" />
+                <!--打印日志的间隔时间-->
+                <property name="poolTimeToWait" value="1000" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.shiqidu.mybatis.mapper"/>
+    </mappers>
+</configuration>
