@@ -25,10 +25,10 @@
     <tbody>
 
     <tr th:each="user : ${users}">
-        <td>${user.id}</td>
-        <td>${user.name}</td>
-        <td>${user.gender == 1 ? '男' : '女'}</td>
-        <td>${user.email}</td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.gender == 1 ? '男' : '女'}"></td>
+        <td th:text="${user.email}"></td>
         <td>
             <a href="">修改</a>
             <a href="">删除</a>

@@ -99,7 +99,8 @@ a {
 }
 
 .add-button {
-    margin-bottom: 20px;
+    display: inline-block;
+    margin: 20px auto;
     padding: 10px;
     background-color: #4CAF50;
     color: #fff;
