@@ -12,7 +12,7 @@
     <!--需要引入每一个实体类，名字（alias）可以任意起名-->
     <!--<typeAlias type="com.shiqidu.mybatis.pojo.User" alias="user"/>-->
     <typeAliases>
-        <package name="com.shiqidu.mybatis.pojo"/>
+        <package name="com.shiqidu.springmvc.bean"/>
     </typeAliases>
 
     <environments default="development">
@@ -36,6 +36,6 @@
         </environment>
     </environments>
     <mappers>
-        <package name="com.shiqidu.mybatis.mapper"/>
+        <package name="com.shiqidu.springmvc.mapper"/>
     </mappers>
 </configuration>
