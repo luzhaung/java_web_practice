@@ -31,11 +31,33 @@
         <td th:text="${user.email}"></td>
         <td>
             <a th:href="@{'/user/' + ${user.id}}">修改</a>
-            <a th:href="@{'/user/' + ${user.id}}" onclick="del(e)">删除</a>
+            <a th:href="@{'/user/' + ${user.id}}" onclick="del(event)">删除</a>
         </td>
     </tr>
 
     </tbody>
 </table>
+
+<!--为删除操作准备一个form表单，点击删除时提交form表单-->
+<div style="display: none">
+    <form method="post" id="delForm">
+        <input type="hidden" name="_method" value="delete"/>
+    </form>
+</div>
+
+<script>
+    function del(event){
+        // 获取表单
+        let delForm = document.getElementById("delForm");
+        // 设置表单action
+        delForm.action = event.target.href;
+        if(window.confirm("您确定要删除吗？")){
+            // 提交表单
+            delForm.submit();
+        }
+        // 阻止超链接默认行为
+        event.preventDefault();
+    }
+</script>
 </body>
 </html>

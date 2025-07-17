@@ -18,6 +18,10 @@
     <update id="update">
         update um_user set name = #{name}, gender = #{gender}, email = #{email} where id = #{id}
     </update>
+
+    <delete id="deleteById">
+        delete from um_user where id = #{id}
+    </delete>
 </mapper>
 
 

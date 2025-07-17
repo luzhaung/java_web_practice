@@ -45,4 +45,13 @@ public class UserController {
         }
         return "redirect:/user";
     }
+
+    @DeleteMapping("/user/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        Integer deleteRows = userDao.deleteById(id);
+        if (deleteRows == 0) {
+            throw new RuntimeException("删除失败");
+        }
+        return "redirect:/user";
+    }
 }

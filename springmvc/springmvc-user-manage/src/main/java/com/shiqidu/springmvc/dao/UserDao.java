@@ -1,5 +1,6 @@
 package com.shiqidu.springmvc.dao;
 
+import com.mysql.cj.log.Log;
 import com.shiqidu.springmvc.bean.User;
 import com.shiqidu.springmvc.mapper.UserMapper;
 import com.shiqidu.springmvc.util.SqlSessionUtil;
@@ -23,8 +24,9 @@ public class UserDao {
         System.out.println("add user: " + user);
         userMapper.add(user);
         sqlSession.commit();
+        Long id = user.getId();
         sqlSession.close();
-        return user.getId();
+        return id;
     }
 
     public User getById(Long id) {
@@ -41,6 +43,16 @@ public class UserDao {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         Integer affectRows = userMapper.update(user);
         System.out.println("affectRows: " + affectRows);
+        sqlSession.commit();
+        sqlSession.close();
+        return affectRows;
+    }
+
+    public Integer deleteById(Long id) {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        Integer affectRows = userMapper.deleteById(id);
+        System.out.println("deleteRows: " + affectRows);
         sqlSession.commit();
         sqlSession.close();
         return affectRows;
