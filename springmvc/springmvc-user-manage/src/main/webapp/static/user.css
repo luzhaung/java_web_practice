@@ -94,8 +94,13 @@ tr:nth-child(even) {
 }
 
 a {
+    color: #007bff;
     text-decoration: none;
-    color: #333;
+    background-color: transparent;
+}
+
+a, a:hover {
+    text-decoration: none;
 }
 
 .add-button {

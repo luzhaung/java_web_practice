@@ -17,7 +17,7 @@ public class UserDao {
         return users;
     }
 
-    public Long save(User user) {
+    public Long add(User user) {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         System.out.println("add user: " + user);
@@ -25,5 +25,24 @@ public class UserDao {
         sqlSession.commit();
         sqlSession.close();
         return user.getId();
+    }
+
+    public User getById(Long id) {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        User user = userMapper.getById(id);
+        System.out.println("get user: " + user);
+        sqlSession.close();
+        return user;
+    }
+
+    public Integer update(User user) {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        Integer affectRows = userMapper.update(user);
+        System.out.println("affectRows: " + affectRows);
+        sqlSession.commit();
+        sqlSession.close();
+        return affectRows;
     }
 }

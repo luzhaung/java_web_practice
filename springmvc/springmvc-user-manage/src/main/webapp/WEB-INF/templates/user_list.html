@@ -30,8 +30,8 @@
         <td th:text="${user.gender == 1 ? '男' : '女'}"></td>
         <td th:text="${user.email}"></td>
         <td>
-            <a href="">修改</a>
-            <a href="">删除</a>
+            <a th:href="@{'/user/' + ${user.id}}">修改</a>
+            <a th:href="@{'/user/' + ${user.id}}" onclick="del(e)">删除</a>
         </td>
     </tr>
 

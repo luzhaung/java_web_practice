@@ -4,9 +4,7 @@ import com.shiqidu.springmvc.bean.User;
 import com.shiqidu.springmvc.dao.UserDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,8 +23,26 @@ public class UserController {
 
     @PostMapping(value = "/user")
     public String save(User user) {
-        Long userId = userDao.save(user);
-        System.out.println("insert id:" + userId);
+        Long userId = userDao.add(user);
+        if (userId == 0) {
+            throw new RuntimeException("新增失败");
+        }
+        return "redirect:/user";
+    }
+
+    @GetMapping("/user/{id}")
+    public String toUpdate(@PathVariable("id") Long id, Model model) {
+        User user = userDao.getById(id);
+        model.addAttribute("user", user);
+        return "user_edit";
+    }
+
+    @PutMapping("/user")
+    public String modify(User user) {
+        Integer affectRows = userDao.update(user);
+        if (affectRows == 0) {
+            throw new RuntimeException("更新失败");
+        }
         return "redirect:/user";
     }
 }

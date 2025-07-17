@@ -8,4 +8,8 @@ public interface UserMapper {
     List<User> selectAll();
 
     Integer add(User user);
+
+    User getById(Long id);
+
+    Integer update(User user);
 }

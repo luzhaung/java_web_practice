@@ -10,6 +10,14 @@
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
         insert into um_user(id,name,email,gender) values (null, #{name}, #{email}, #{gender})
     </insert>
+
+    <select id="getById" resultType="com.shiqidu.springmvc.bean.User">
+        SELECT * FROM um_user where id = #{id}
+    </select>
+
+    <update id="update">
+        update um_user set name = #{name}, gender = #{gender}, email = #{email} where id = #{id}
+    </update>
 </mapper>
 
 
