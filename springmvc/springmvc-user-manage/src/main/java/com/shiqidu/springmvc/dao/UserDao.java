@@ -14,7 +14,7 @@ public class UserDao {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         List<User> users = userMapper.selectAll();
         System.out.println("users: " + users);
-        sqlSession.close();
+        SqlSessionUtil.close(sqlSession);
         return users;
     }
 
@@ -25,7 +25,7 @@ public class UserDao {
         userMapper.add(user);
         sqlSession.commit();
         Long id = user.getId();
-        sqlSession.close();
+        SqlSessionUtil.close(sqlSession);
         return id;
     }
 
@@ -34,7 +34,7 @@ public class UserDao {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         User user = userMapper.getById(id);
         System.out.println("get user: " + user);
-        sqlSession.close();
+        SqlSessionUtil.close(sqlSession);
         return user;
     }
 
@@ -44,7 +44,7 @@ public class UserDao {
         Integer affectRows = userMapper.update(user);
         System.out.println("affectRows: " + affectRows);
         sqlSession.commit();
-        sqlSession.close();
+        SqlSessionUtil.close(sqlSession);
         return affectRows;
     }
 
@@ -54,7 +54,7 @@ public class UserDao {
         Integer affectRows = userMapper.deleteById(id);
         System.out.println("deleteRows: " + affectRows);
         sqlSession.commit();
-        sqlSession.close();
+        SqlSessionUtil.close(sqlSession);
         return affectRows;
     }
 }
