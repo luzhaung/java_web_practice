@@ -5,23 +5,25 @@ import com.shiqidu.springmvc.mapper.UserMapper;
 import com.shiqidu.springmvc.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
-    private static SqlSession sqlSession = SqlSessionUtil.openSession();
-    private static List<User> users = new ArrayList<User>();
-
-    public static List<User> selectAll() {
+    public List<User> selectAll() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         List<User> users = userMapper.selectAll();
         System.out.println("users: " + users);
+        sqlSession.close();
         return users;
     }
 
-    public static Integer save(User user) {
+    public Long save(User user) {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         System.out.println("add user: " + user);
-        return userMapper.add(user);
+        userMapper.add(user);
+        sqlSession.commit();
+        sqlSession.close();
+        return user.getId();
     }
 }

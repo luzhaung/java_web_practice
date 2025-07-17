@@ -12,11 +12,11 @@ import java.util.List;
 
 @Controller
 public class UserController {
-    private UserDao userDao;
+    private UserDao userDao = new UserDao();
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String list(Model model) {
-        List<User> users = UserDao.selectAll();
+        List<User> users = userDao.selectAll();
         // 存储到request域
         model.addAttribute("users", users);
         // 跳转视图
@@ -25,8 +25,8 @@ public class UserController {
 
     @PostMapping(value = "/user")
     public String save(User user) {
-        Integer count = UserDao.save(user);
-        System.out.println("insert count:" + count);
+        Long userId = userDao.save(user);
+        System.out.println("insert id:" + userId);
         return "redirect:/user";
     }
 }
