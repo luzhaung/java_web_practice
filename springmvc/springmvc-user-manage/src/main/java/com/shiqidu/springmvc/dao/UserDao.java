@@ -1,6 +1,5 @@
 package com.shiqidu.springmvc.dao;
 
-import com.mysql.cj.log.Log;
 import com.shiqidu.springmvc.bean.User;
 import com.shiqidu.springmvc.mapper.UserMapper;
 import com.shiqidu.springmvc.util.SqlSessionUtil;
