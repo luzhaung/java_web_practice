@@ -7,9 +7,9 @@
 </head>
 <body>
 <h1>新增用户</h1>
-<form>
+<form th:action="@{/user}" method="post">
   <label>用户名:</label>
-  <input type="text" name="username" required>
+  <input type="text" name="name" required>
 
   <label>性别:</label>
   <select name="gender" required>

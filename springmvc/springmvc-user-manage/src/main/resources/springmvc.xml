@@ -41,4 +41,5 @@
 
     <!--视图控制器映射-->
     <mvc:view-controller path="/" view-name="user_index"/>
+    <mvc:view-controller path="/toSave" view-name="user_add"/>
 </beans>

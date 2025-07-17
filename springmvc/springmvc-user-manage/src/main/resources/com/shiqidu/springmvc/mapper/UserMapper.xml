@@ -6,6 +6,10 @@
     <select id="selectAll" resultType="com.shiqidu.springmvc.bean.User">
         SELECT * FROM um_user
     </select>
+
+    <select id="add">
+        insert into um_user(id,name,email,gender) values (null, #{name}, #{email}, #{gender})
+    </select>
 </mapper>
 
 
