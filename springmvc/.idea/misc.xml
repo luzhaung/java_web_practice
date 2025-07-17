@@ -8,10 +8,11 @@
         <option value="$PROJECT_DIR$/springmvc-004/pom.xml" />
         <option value="$PROJECT_DIR$/spingmvc-007/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc-007/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-user-manage/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
