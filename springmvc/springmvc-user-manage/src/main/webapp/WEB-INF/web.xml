@@ -45,6 +45,14 @@
             <param-value>classpath:springmvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
+        <multipart-config>
+            <!--单个文件最大大小-->
+            <max-file-size>102400</max-file-size>
+            <!--整个表单所有文件的最大大小-->
+            <max-request-size>102400</max-request-size>
+            <!--最小上传文件大小-->
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
     </servlet>
 
     <servlet-mapping>
