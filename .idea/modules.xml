@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dynamic_proxy/dynamic_proxy.iml" filepath="$PROJECT_DIR$/dynamic_proxy/dynamic_proxy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mybatis/src/main/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/src/main/mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mybatis1/src/test/mybatis1.iml" filepath="$PROJECT_DIR$/mybatis1/src/test/mybatis1.iml" />
       <module fileurl="file://$PROJECT_DIR$/oa/oa.iml" filepath="$PROJECT_DIR$/oa/oa.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet01/servlet01.iml" filepath="$PROJECT_DIR$/servlet01/servlet01.iml" />
     </modules>
