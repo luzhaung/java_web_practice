@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shiqidu</groupId>
-    <artifactId>SpringBoot3</artifactId>
+    <artifactId>springboot-fisrt-web</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--继承Spring Boot 3.3.5开源项目-->
+    <!--继承Spring Boot 3.3.3开源项目-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
