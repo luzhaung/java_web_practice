@@ -6,6 +6,8 @@ import com.shiqidu.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author luzhuang
  * @version 1.0
@@ -20,5 +22,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Integer id) {
         return userDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userDao.selectAll();
     }
 }

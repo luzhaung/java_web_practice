@@ -3,6 +3,8 @@ package com.shiqidu.springboot.dao;
 import com.shiqidu.springboot.bean.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface UserDao {
     int deleteByPrimaryKey(Integer id);
@@ -16,4 +18,6 @@ public interface UserDao {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    List<User> selectAll();
 }
