@@ -30,6 +30,4 @@ public enum CodeEnum {
     @Getter
     @Setter
     private String msg;
-
-
 }
