@@ -1,6 +1,5 @@
 package com.shiqidu.springboot.result;
 
-import com.github.pagehelper.PageInfo;
 import com.shiqidu.springboot.enums.CodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
